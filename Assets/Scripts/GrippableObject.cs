@@ -13,11 +13,6 @@ public class GrippableObject : MonoBehaviour
         Rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void Update()
-    {
-        //Debug.Log(_rigidbody.velocity);
-    }
-
     public virtual void OnGripped(Transform parent, Vector3 velocity)
     {
         transform.SetParent(parent);
