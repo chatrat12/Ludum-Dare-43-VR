@@ -11,6 +11,7 @@ public class TriggerVolume : MonoBehaviour
 
     public List<T> GetComponentsInVolume<T>(ref List<T> result) where T : Component
     {
+        result.Clear();
         foreach (var collider in CollidersInVolume)
         {
             if (collider != null && collider.gameObject != null)

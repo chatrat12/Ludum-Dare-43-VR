@@ -9,27 +9,24 @@ public class HandGrip : MonoBehaviour
     private List<GrippableObject> _grippables = new List<GrippableObject>();
     private GrippableObject _grippedObject;
     private Vector3 _prevPosition;
+    private Quaternion _prevRotation;
     private Vector3 _velocity;
-    private Vector3 _anchor;
+    private Quaternion _angularVelocity;
 
     private void Awake()
     {
         _prevPosition = transform.position;
+        _prevRotation = transform.rotation;
         _triggerVolume = GetComponent<TriggerVolume>();
         var input = GetComponent<GripInput>();
         input.Activated += (sender) => Grip();
         input.Deactivated += (sender) => ReleaseGrip();
     }
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
-        _velocity = (transform.position - _prevPosition);//* Time.fixedDeltaTime;
+        _velocity = (transform.position - _prevPosition) / Time.deltaTime;
         _prevPosition = transform.position;
-        if(_grippedObject != null)
-        {
-            _grippedObject.Rigidbody.MovePosition(transform.position + _anchor);
-        }
-        //Debug.Log(_velocity);
     }
 
     private void Grip()
@@ -40,8 +37,6 @@ public class HandGrip : MonoBehaviour
         if (first != null)
         {
             _grippedObject = first;
-            _grippedObject.Rigidbody.isKinematic = false;
-            _anchor = _grippedObject.transform.position - transform.position;
             _grippedObject.OnGripped(this.transform, _velocity);
         }
 

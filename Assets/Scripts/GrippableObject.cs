@@ -17,15 +17,15 @@ public class GrippableObject : MonoBehaviour
 
     public virtual void OnGripped(Transform parent, Vector3 velocity)
     {
-        //transform.SetParent(parent);
-        //_rigidbody.isKinematic = true;
+        transform.SetParent(parent);
+        Rigidbody.isKinematic = true;
     }
 
     public virtual void OnReleased(Transform parent, Vector3 velocity)
     {
-        //transform.SetParent(null);
-        //_rigidbody.isKinematic = false;
-        //_rigidbody.velocity = velocity * 100;
+        transform.SetParent(null);
+        Rigidbody.isKinematic = false;
+        Rigidbody.velocity = velocity;
         
     }
 }
