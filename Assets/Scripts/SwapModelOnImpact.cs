@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwapModelOnImpact : MonoBehaviour {
+public class SwapModelOnImpact : MonoBehaviour
+{
     public GameObject WholeModel;
     public GameObject DestructibleModel;
 
