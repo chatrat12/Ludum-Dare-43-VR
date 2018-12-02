@@ -14,6 +14,12 @@ public class GameBall : GrippableObject
             mass.Rigidbody.AddForce((transform.position - mass.transform.position) * _force);
     }
 
+    public void AttachMass(BallMass mass)
+    {
+        _masses.Add(mass);
+        mass.OnAttach(this);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         var mass = other.GetComponent<BallMass>();
