@@ -34,21 +34,24 @@ public class MattSaysGame : MonoBehaviour
     {
         SpawnButtons();
 
-        while(true)
+        while (true)
         {
+            AddToSequence();
             await Recite();
             if (!await GetPlayerResponse())
                 await DoGameOver();
         }
     }
 
+    private void AddToSequence()
+        => _sequence.Add(Random.Range(0, _buttons.Length));
+
+
     private async Task Recite()
     {
         // Pause
         await Await.Seconds(1);
 
-        // Add new button to sequence
-        _sequence.Add(Random.Range(0, _buttons.Length));
         foreach (var buttonIndex in _sequence)
         {
             _buttons[buttonIndex].Lit = true;
@@ -73,7 +76,7 @@ public class MattSaysGame : MonoBehaviour
             _buttons[i].Lit = _buttons[i].Input.Touched;
 
             // Add listeners for button interactions
-            _buttons[i].Input.Pressed  += (sender) => _buttons[index].Lit = true;
+            _buttons[i].Input.Pressed += (sender) => _buttons[index].Lit = true;
             _buttons[i].Input.Released += (sender) =>
             {
                 // Pressed correct button in sequence
@@ -129,14 +132,4 @@ public class MattSaysGame : MonoBehaviour
             _buttons[i] = button;
         }
     }
-
-
-    public enum GameMode
-    {
-        Reciting,
-        WaitingForPlayer,
-        GameOver
-    }
-
-    
 }
