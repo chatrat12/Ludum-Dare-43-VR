@@ -375,9 +375,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e37e460192eef441beeea9b7836fe23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _throwVelocityModifier: 2
+  _throwVelocityModifier: 3
   _snappingTransfrom: {fileID: 4167419702761348}
-  _force: 100
+  _force: 200
 --- !u!135 &135002961997611750
 SphereCollider:
   m_ObjectHideFlags: 1
