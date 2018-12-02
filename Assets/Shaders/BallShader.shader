@@ -5,6 +5,7 @@
         _MainTex ("Texture", 2D) = "white" {}
 		_Color1 ("Color 1", Color) = (1, 1, 1, 1)
 		_Color2 ("Color 2", Color) = (0, 0, 0, 1)
+		_Cutoff ("Cutoff", Float) = .25
     }
     SubShader
     {
@@ -41,6 +42,7 @@
             float4 _MainTex_ST;
 			fixed3 _Color1;
 			fixed3 _Color2;
+			float _Cutoff;
             
             v2f vert (appdata v)
             {
@@ -60,7 +62,7 @@
 				col.rgb = i.viewDir*0.5 + 0.5;
 				float f = 1 - dot(normalize(i.viewDir), i.normal);
 				f = pow(f, .75);
-				if (f < .25)
+				if (f < _Cutoff)
 					f = 0;
 				col.rgb = lerp(_Color1, _Color2, f);
 

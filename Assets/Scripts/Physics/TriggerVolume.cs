@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class TriggerVolume : MonoBehaviour
 {
+    [SerializeField] private bool _ignoreTriggers = false;
+
     public delegate void ColliderEvent(Collider collider);
     public event ColliderEvent TriggerEntered;
     public event ColliderEvent TriggerExited;
@@ -36,6 +38,7 @@ public class TriggerVolume : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
+        if (collider.isTrigger && _ignoreTriggers) return;
         if (!CollidersInVolume.Contains(collider))
             CollidersInVolume.Add(collider);
         if (TriggerEntered != null)
@@ -43,6 +46,7 @@ public class TriggerVolume : MonoBehaviour
     }
     private void OnTriggerExit(Collider collider)
     {
+        if (collider.isTrigger && _ignoreTriggers) return;
         if (CollidersInVolume.Contains(collider))
             CollidersInVolume.Remove(collider);
         if (TriggerExited != null)

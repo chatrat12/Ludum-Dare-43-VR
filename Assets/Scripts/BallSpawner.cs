@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 [RequireComponent(typeof(TriggerVolume))]
 public class BallSpawner : MonoBehaviour
@@ -7,11 +8,15 @@ public class BallSpawner : MonoBehaviour
 
     private void Awake()
     {
+        var triggerVolume = GetComponent<TriggerVolume>();
         GetComponent<TriggerVolume>().TriggerExited += (collider) =>
         {
-            // If game ball left trigger volume, spawn new ball
-            if (collider.GetComponent<GameBall>() != null)
+            // If game ball left trigger volume and no game balls, spawn new ball
+            if (collider.GetComponent<GameBall>() != null
+                && !triggerVolume.CollidersInVolume.Any(c => c.GetComponent<GameBall>() != null))
+            {
                 SpawnBall();
+            }
         };
         SpawnBall();
     }
