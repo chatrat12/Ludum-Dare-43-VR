@@ -10,7 +10,6 @@ public class GameBall : GrippableObject
 
     private void FixedUpdate()
     {
-        Debug.Log("fixed update");
         foreach (var mass in _masses)
             mass.Rigidbody.AddForce((transform.position - mass.transform.position) * _force);
     }
