@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e37e460192eef441beeea9b7836fe23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _throwVelocityModifier: 3
+  _throwVelocityModifier: 4
   _snappingTransfrom: {fileID: 4167419702761348}
   _force: 200
 --- !u!135 &135002961997611750
