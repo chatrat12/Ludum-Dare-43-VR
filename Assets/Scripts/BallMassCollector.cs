@@ -11,7 +11,6 @@ public class BallMassCollector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
         var mass = other.GetComponent<BallMass>();
         if (mass != null && !mass.Attached)
         {
