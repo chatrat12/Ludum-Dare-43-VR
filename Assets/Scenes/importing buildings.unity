@@ -285,8 +285,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1102456884}
-  - component: {fileID: 1102456883}
   - component: {fileID: 1102456885}
+  - component: {fileID: 1102456883}
   m_Layer: 0
   m_Name: destructibleBuilding
   m_TagString: Untagged
@@ -302,12 +302,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1102456882}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e66d428b11869e746a077c1dfe29acc1, type: 3}
+  m_Script: {fileID: 11500000, guid: 84fa7078478d5be4cb64c87e1849b70f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WholeModel: {fileID: 1882720388}
-  DestructibleModel: {fileID: 1750750101444258, guid: 9e241773f73cf28488e8ab4d2503fe3e,
-    type: 2}
+  _fracturedModel: {fileID: 0}
+  _breakForce: 100
+  _debrisImpactForceModifier: 1
 --- !u!4 &1102456884
 Transform:
   m_ObjectHideFlags: 0
@@ -442,11 +442,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee93cc0aa509ee545b5d15c2900915c0, type: 3}
   m_IsPrefabAsset: 0
---- !u!1 &1882720388 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: ee93cc0aa509ee545b5d15c2900915c0,
-    type: 3}
-  m_PrefabInternal: {fileID: 1882720387}
 --- !u!4 &1882720389 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ee93cc0aa509ee545b5d15c2900915c0,
