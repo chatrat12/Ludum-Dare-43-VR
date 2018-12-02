@@ -91,6 +91,8 @@ GameObject:
   - component: {fileID: 4024433542019524}
   - component: {fileID: 135002961997611750}
   - component: {fileID: 54939089988342294}
+  - component: {fileID: 135123542692649006}
+  - component: {fileID: 114054253338822800}
   m_Layer: 9
   m_Name: BallMassCollider
   m_TagString: Untagged
@@ -364,6 +366,17 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &114054253338822800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1998900551857730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dcf44edf279b4c4ea34d40cbbb1790f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114445764238499270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -390,6 +403,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135123542692649006
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1998900551857730}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.0758464
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135242322548784996
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -410,7 +435,7 @@ SphereCollider:
   m_GameObject: {fileID: 1719343117805900}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 1.0758464
   m_Center: {x: 0, y: 0, z: 0}
