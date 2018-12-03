@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(GripInput), typeof(TriggerVolume))]
 public class HandGrip : MonoBehaviour
 {
+    public bool IsLeftHand { get; private set; }
+
     private TriggerVolume _triggerVolume;
     private List<GrippableObject> _grippables = new List<GrippableObject>();
     private GrippableObject _grippedObject;
@@ -21,6 +23,7 @@ public class HandGrip : MonoBehaviour
         var input = GetComponent<GripInput>();
         input.Activated += (sender) => Grip();
         input.Deactivated += (sender) => ReleaseGrip();
+        IsLeftHand = input.Hand == GripInput.HandType.Left;
     }
 
     private void LateUpdate()
@@ -31,13 +34,13 @@ public class HandGrip : MonoBehaviour
 
     private void Grip()
     {
-        // TODO: Find closes to hand
+        // TODO: Find closest to hand
         var grippables = _triggerVolume.GetComponentsInVolume(ref _grippables);
-        var first = grippables.FirstOrDefault();
+        var first = grippables.Where(g => !g.Gripped).FirstOrDefault();
         if (first != null)
         {
             _grippedObject = first;
-            _grippedObject.OnGripped(this.transform, _velocity);
+            _grippedObject.OnGripped(this, _velocity);
         }
 
     }
@@ -46,7 +49,7 @@ public class HandGrip : MonoBehaviour
     {
         if (_grippedObject != null)
         {
-            _grippedObject.OnReleased(this.transform, _velocity);
+            _grippedObject.OnReleased(this, _velocity);
             _grippedObject = null;
         }
     }

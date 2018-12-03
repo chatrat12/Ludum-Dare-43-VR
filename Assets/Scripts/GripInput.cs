@@ -7,6 +7,8 @@ public class GripInput : MonoBehaviour
     public event GripInputEvent Deactivated;
 
     public bool Active { get; private set; }
+    public HandType Hand => _hand;
+
 
     [SerializeField] private HandType _hand;
 
