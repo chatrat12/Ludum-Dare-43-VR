@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class ScoreDisplayVisibility : MonoBehaviour
 {
+    [SerializeField] private GameMenu _menu;
     [SerializeField] private float _lookAtThreshold = 0.5f;
     [SerializeField] private float _upThreshold = 0.5f;
     
@@ -29,7 +30,7 @@ public class ScoreDisplayVisibility : MonoBehaviour
         // Make sure wrist is pointing up.
         var u = Vector3.Dot(-transform.up, Vector3.up) > _upThreshold;
 
-        bool visible = l && u;
+        bool visible = l && u || _menu.Visible;
         if(visible && !_canvas.enabled)
             _canvas.enabled = _scaler.enabled = true;
 

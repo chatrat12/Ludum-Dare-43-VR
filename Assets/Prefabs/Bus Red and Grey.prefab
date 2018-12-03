@@ -159,9 +159,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1332444842951122}
-  m_LocalRotation: {x: -0.3977661, y: -0, z: -0, w: 0.91748685}
-  m_LocalPosition: {x: 1.802789, y: -8.576, z: 1.637}
-  m_LocalScale: {x: 0.18555601, y: 0.18555601, z: 0.18555601}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.9517698, y: 0.024866924, z: 1.6177454}
+  m_LocalScale: {x: 0.030000001, y: 0.030000001, z: 0.03}
   m_Children:
   - {fileID: 4950956825526358}
   - {fileID: 4443043759821554}
@@ -445,3 +445,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 170982449d066634ca6a4ea906ddbd69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _score: 50
+  _casualties: 12

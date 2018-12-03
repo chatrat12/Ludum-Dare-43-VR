@@ -6,6 +6,7 @@ public class GameBall : GrippableObject
 {
 
     public float AttachedMass => _masses.Sum(m => m.Rigidbody.mass);
+    public float MassScore => _masses.Sum(m => m.Score);
     [SerializeField] private float _force = 100;
 
     private List<BallMass> _masses = new List<BallMass>();
