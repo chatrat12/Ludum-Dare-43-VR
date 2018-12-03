@@ -67,6 +67,10 @@ ModelImporter:
     100122: ufo002
     100124: ufo003
     100126: ufo01
+    100128: ChamferBox001
+    100130: Circle001
+    100132: Cylinder001
+    100134: PhysCamera001
     400000: Box001
     400002: Circle002
     400004: Circle003
@@ -131,6 +135,10 @@ ModelImporter:
     400122: ufo002
     400124: ufo003
     400126: ufo01
+    400128: ChamferBox001
+    400130: Circle001
+    400132: Cylinder001
+    400134: PhysCamera001
     2100000: 'Material #26'
     2100002: asphalt
     2100004: 'Material #27'
@@ -203,6 +211,9 @@ ModelImporter:
     2300122: ufo002
     2300124: ufo003
     2300126: ufo01
+    2300128: ChamferBox001
+    2300130: Circle001
+    2300132: Cylinder001
     3300000: Box001
     3300002: Circle002
     3300004: Circle003
@@ -267,6 +278,9 @@ ModelImporter:
     3300122: ufo002
     3300124: ufo003
     3300126: ufo01
+    3300128: ChamferBox001
+    3300130: Circle001
+    3300132: Cylinder001
     4300000: Circle002
     4300002: Circle003
     4300004: Circle004
@@ -330,6 +344,9 @@ ModelImporter:
     4300120: Box030
     4300122: Box031
     4300124: Box032
+    4300126: ChamferBox001
+    4300128: Cylinder001
+    4300130: Circle001
     6400000: Box001
     6400002: Circle002
     6400004: Circle003
@@ -394,6 +411,9 @@ ModelImporter:
     6400122: ufo002
     6400124: ufo003
     6400126: ufo01
+    6400128: ChamferBox001
+    6400130: Circle001
+    6400132: Cylinder001
   externalObjects: {}
   materials:
     importMaterials: 1
