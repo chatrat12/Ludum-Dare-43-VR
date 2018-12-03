@@ -46,6 +46,10 @@ ModelImporter:
     100080: ufo002
     100082: ufo003
     100084: ufo01
+    100086: Box034
+    100088: Box035
+    100090: Box036
+    100092: Box037
     400000: Box002
     400002: Box004
     400004: Box007
@@ -89,6 +93,10 @@ ModelImporter:
     400080: ufo002
     400082: ufo003
     400084: ufo01
+    400086: Box034
+    400088: Box035
+    400090: Box036
+    400092: Box037
     2100000: 'Material #29'
     2100002: 'Material #30'
     2100004: concrete
@@ -134,6 +142,10 @@ ModelImporter:
     2300076: ufo002
     2300078: ufo003
     2300080: ufo01
+    2300082: Box034
+    2300084: Box035
+    2300086: Box036
+    2300088: Box037
     3300000: Box002
     3300002: Box004
     3300004: Box007
@@ -175,6 +187,10 @@ ModelImporter:
     3300076: ufo002
     3300078: ufo003
     3300080: ufo01
+    3300082: Box034
+    3300084: Box035
+    3300086: Box036
+    3300088: Box037
     4300000: ufo01
     4300002: ufo002
     4300004: ufo003
@@ -216,6 +232,10 @@ ModelImporter:
     4300076: Box031
     4300078: Box032
     4300080: Box033
+    4300082: Box034
+    4300084: Box035
+    4300086: Box036
+    4300088: Box037
     6400000: Box002
     6400002: Box004
     6400004: Box007
@@ -257,6 +277,10 @@ ModelImporter:
     6400076: ufo002
     6400078: ufo003
     6400080: ufo01
+    6400082: Box034
+    6400084: Box035
+    6400086: Box036
+    6400088: Box037
     7400000: Take 001
     9500000: //RootNode
   externalObjects: {}
@@ -286,7 +310,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
