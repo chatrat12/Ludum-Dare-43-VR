@@ -4,11 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
 {
+    public bool Visible => _retryBall.gameObject.activeInHierarchy;
+
     [SerializeField] private MenuBall _retryBall;
     [SerializeField] private MenuBall _quitBall;
 
     private bool _canClose = true;
-    private bool _visible => _retryBall.gameObject.activeInHierarchy;
     private List<ParticleSystem> _particles = new List<ParticleSystem>();
 
 
@@ -48,9 +49,9 @@ public class GameMenu : MonoBehaviour
 
     private void Toggle()
     {
-        if (_visible && !_canClose)
+        if (Visible && !_canClose)
             return;
-        SetVisibility(!_visible);
+        SetVisibility(!Visible);
     }
 
     public void Show() => SetVisibility(true);

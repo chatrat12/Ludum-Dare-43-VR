@@ -7,7 +7,7 @@ public class BallTarget : MonoBehaviour
         var ball = collision.collider.GetComponent<GameBall>();
         if(ball != null)
         {
-            PlayerScore.Add(ball.AttachedMass);
+            PlayerScore.Add(ball.MassScore);
             Destroy(ball.gameObject);
         }
     }
