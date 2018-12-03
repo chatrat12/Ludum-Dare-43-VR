@@ -2116,6 +2116,36 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 33840260348490690, guid: 95ff5677077041b4dac37d6b41aa63b7,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 33414185441179882, guid: 95ff5677077041b4dac37d6b41aa63b7,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114673448025079596, guid: 95ff5677077041b4dac37d6b41aa63b7,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114673448025079596, guid: 95ff5677077041b4dac37d6b41aa63b7,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114223333314065820, guid: 95ff5677077041b4dac37d6b41aa63b7,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114223333314065820, guid: 95ff5677077041b4dac37d6b41aa63b7,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114574143548354632, guid: 95ff5677077041b4dac37d6b41aa63b7,
         type: 2}
       propertyPath: m_havePropertiesChanged
@@ -2125,6 +2155,14 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4252752471618878, guid: 95ff5677077041b4dac37d6b41aa63b7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.934
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463560462725084, guid: 95ff5677077041b4dac37d6b41aa63b7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.93400025
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95ff5677077041b4dac37d6b41aa63b7, type: 2}

@@ -18,7 +18,7 @@ public class GrippableObject : MonoBehaviour
         transform.SetParent(gripper.transform);
         Rigidbody.isKinematic = true;
         Gripped = true;
-        if(_snappingTransfrom != null)
+        if (_snappingTransfrom != null)
         {
             var offset = _snappingTransfrom.localPosition;
             transform.position = gripper.transform.position;
@@ -40,6 +40,7 @@ public class GrippableObject : MonoBehaviour
         Gripped = false;
         transform.SetParent(null);
         Rigidbody.isKinematic = false;
-        Rigidbody.velocity = velocity * _throwVelocityModifier;
+        if(Time.timeScale > 0)
+            Rigidbody.velocity = velocity * _throwVelocityModifier;
     }
 }
