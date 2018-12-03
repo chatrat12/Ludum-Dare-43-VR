@@ -10,7 +10,7 @@ public class DebugGamePause : MonoBehaviour
             var balls = FindObjectsOfType<GameBall>();
             foreach (var ball in balls)
             {
-                if (!ball.Rigidbody.isKinematic)
+                if(!ball.Rigidbody.isKinematic)
                 {
                     foreach (var rb in ball.GetComponentsInChildren<Rigidbody>())
                         Destroy(rb);
