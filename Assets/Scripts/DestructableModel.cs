@@ -10,12 +10,16 @@ public class DestructableModel : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         var mass = collision.collider.GetComponentsInChildren<Rigidbody>().Sum(rb => rb.mass);
+
         if (collision.relativeVelocity.magnitude * mass > _breakForce)
         {
             // Disable previous collision so we can spawn in
             // the fractured model
             GetComponent<Collider>().enabled = false;
             var fracturedModel = Instantiate(_fracturedModel, transform.position, transform.rotation);
+
+            fracturedModel.transform.localScale = this.transform.localScale;
+
             Destroy(this.gameObject);
 
             // Apply impact force to debris
