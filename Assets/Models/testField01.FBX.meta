@@ -14,6 +14,14 @@ ModelImporter:
     100016: Circle007
     100018: Circle008
     100020: Circle009
+    100022: Tube001
+    100024: Tube002
+    100026: Tube003
+    100028: Tube004
+    100030: Tube005
+    100032: Tube006
+    100034: Tube007
+    100036: Tube008
     400000: Box001
     400002: Circle001
     400004: Circle002
@@ -25,8 +33,17 @@ ModelImporter:
     400016: Circle007
     400018: Circle008
     400020: Circle009
+    400022: Tube001
+    400024: Tube002
+    400026: Tube003
+    400028: Tube004
+    400030: Tube005
+    400032: Tube006
+    400034: Tube007
+    400036: Tube008
     2100000: asphalt
     2100002: 'Material #26'
+    2100004: 'Material #27'
     2300000: Box001
     2300002: Circle001
     2300004: Circle002
@@ -37,6 +54,14 @@ ModelImporter:
     2300014: Circle007
     2300016: Circle008
     2300018: Circle009
+    2300020: Tube001
+    2300022: Tube002
+    2300024: Tube003
+    2300026: Tube004
+    2300028: Tube005
+    2300030: Tube006
+    2300032: Tube007
+    2300034: Tube008
     3300000: Box001
     3300002: Circle001
     3300004: Circle002
@@ -47,6 +72,14 @@ ModelImporter:
     3300014: Circle007
     3300016: Circle008
     3300018: Circle009
+    3300020: Tube001
+    3300022: Tube002
+    3300024: Tube003
+    3300026: Tube004
+    3300028: Tube005
+    3300030: Tube006
+    3300032: Tube007
+    3300034: Tube008
     4300000: Box001
     4300002: Circle001
     4300004: Circle002
@@ -57,6 +90,14 @@ ModelImporter:
     4300014: Circle007
     4300016: Circle008
     4300018: Circle009
+    4300020: Tube001
+    4300022: Tube002
+    4300024: Tube003
+    4300026: Tube004
+    4300028: Tube005
+    4300030: Tube006
+    4300032: Tube007
+    4300034: Tube008
     6400000: Circle002
     6400002: Circle003
     6400004: Circle004
@@ -65,6 +106,15 @@ ModelImporter:
     6400010: Circle007
     6400012: Circle008
     6400014: Circle009
+    6400016: Tube001
+    6400018: Tube002
+    6400020: Tube003
+    6400022: Tube004
+    6400024: Tube005
+    6400026: Tube006
+    6400028: Tube007
+    6400030: Tube008
+    6400032: Box001
   externalObjects: {}
   materials:
     importMaterials: 1

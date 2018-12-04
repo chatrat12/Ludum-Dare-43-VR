@@ -257,7 +257,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!54 &54939089988342294
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -404,7 +404,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 1
+  m_Time: 10
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 1
@@ -515,7 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e37e460192eef441beeea9b7836fe23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _throwVelocityModifier: 3
+  _throwVelocityModifier: 4
   _snappingTransfrom: {fileID: 4167419702761348}
   _force: 200
 --- !u!114 &114457330002507718
