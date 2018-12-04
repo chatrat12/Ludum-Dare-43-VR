@@ -20,6 +20,7 @@ public class BallMass : MonoBehaviour
     public virtual void OnAttach(GameBall ball)
     {
         Attached = true;
+        Rigidbody.isKinematic = false;
         if (!_casualtiesCounted)
         {
             PlayerScore.AddCasualties(Casualties);
