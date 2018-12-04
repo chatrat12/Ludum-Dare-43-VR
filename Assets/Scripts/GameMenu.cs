@@ -63,4 +63,10 @@ public class GameMenu : MonoBehaviour
         _retryBall.gameObject.SetActive(visible);
         _quitBall.gameObject.SetActive(visible);
     }
+
+    public void ShowGameOver()
+    {
+        Show();
+        _canClose = false;
+    }
 }
