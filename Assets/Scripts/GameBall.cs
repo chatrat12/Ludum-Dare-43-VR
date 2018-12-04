@@ -24,6 +24,10 @@ public class GameBall : GrippableObject
             if(_timeStill >= _killTime)
                 Destroy(this.gameObject);
         }
+
+        // Kill if to low
+        if (transform.position.y < -10)
+            Destroy(this.gameObject);
     }
 
 
