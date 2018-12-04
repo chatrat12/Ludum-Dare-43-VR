@@ -8,13 +8,29 @@ public class GameBall : GrippableObject
     public float AttachedMass => _masses.Sum(m => m.Rigidbody.mass);
     public float MassScore => _masses.Sum(m => m.Score);
     [SerializeField] private float _force = 100;
+    [SerializeField] private float _killVelocity = 0.1f;
+    [SerializeField] private float _killTime = 2.0f;
 
     private List<BallMass> _masses = new List<BallMass>();
+    private float _timeStill;
 
     private void FixedUpdate()
     {
         foreach (var mass in _masses)
             mass.Rigidbody.AddForce((transform.position - mass.transform.position) * _force);
+        if (!Rigidbody.isKinematic)
+        {
+            _timeStill = Rigidbody.velocity.magnitude < _killVelocity ? _timeStill + Time.fixedDeltaTime : 0;
+            if(_timeStill >= _killTime)
+                Destroy(this.gameObject);
+        }
+    }
+
+
+    public void OnDestroy()
+    {
+        foreach (var mass in _masses)
+            mass.Detach();
     }
 
     public void AttachMass(BallMass mass)

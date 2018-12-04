@@ -10,6 +10,8 @@ public class BallMass : MonoBehaviour
     [SerializeField] private float _score = 10;
     [SerializeField] private int _casualties = 1;
 
+    private bool _casualtiesCounted = false;
+
     private void Awake()
     {
         Rigidbody = GetComponent<Rigidbody>();
@@ -18,7 +20,16 @@ public class BallMass : MonoBehaviour
     public virtual void OnAttach(GameBall ball)
     {
         Attached = true;
-        this.gameObject.layer = LayerMask.NameToLayer("BallMass");
+        Rigidbody.isKinematic = false;
+        if (!_casualtiesCounted)
+        {
             PlayerScore.AddCasualties(Casualties);
+            _casualtiesCounted = true;
+        }
+    }
+
+    public void Detach()
+    {
+        Attached = false;
     }
 }
